@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(51, 50, 50);
+            color: lightblue;
+        }
+        </style>
+  </head>
+  <body>
+    <div class="root"></div>
+
+    <script>
+        let root = document.querySelector('.root')
+        let div = document.createElement('div')
+        console.log(div);
+        div.innerText = 'hello'
+        div.style.backgroundColor = 'green'
+        div.setAttribute('class','main')
+        div.className = '2main'
+        div.id = 'myid'
+        div.setAttribute('title', 'div tag')
+        root.append(div)
+    </script>
+  </body>
+</html>

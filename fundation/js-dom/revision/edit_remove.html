@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(51, 50, 50);
+            color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <ul class="main">
+        <li class="child">JavaScript</li>
+    </ul>
+    <script>
+        let main = document.querySelector('.main')
+        let child = document.querySelector('.child')
+
+        function createLi(name){
+            let li = document.createElement('li')
+            li.className = 'child'
+            li.innerText = name
+            main.appendChild(li)
+        }
+
+        createLi('Python')
+        createLi('HTML')
+        createLi('CSS')
+
+    </script>
+</body>
+</html>
