@@ -1,8 +1,21 @@
 let btt = document.querySelector('#btt')
 let pTag = document.querySelector('#para')
 
-btt.addEventListener('dblclick',(e)=>{
-    let timeStamp = Date(e.timeStamp)
-    console.log(e.timeStamp, '->' , timeStamp);
-    pTag.textContent = timeStamp
+// btt.addEventListener('mouseover',(e)=>{
+//     btt.textContent = 'mousein'
+// })
+// btt.addEventListener('mouseout',(e)=>{
+//     btt.textContent = 'mouseout'
+// })
+
+// pTag.addEventListener('click' , () => {
+//     pTag.textContent = 'clicked on para'
+// })
+
+// document.addEventListener('keydown' , (e) => {
+//     pTag.textContent = 'key down ' + e.key
+// })
+
+document.addEventListener('keypress' , (e) => {
+    pTag.textContent = 'key down ' + e.key
 })
