@@ -7,15 +7,21 @@
   </head>
   <body></body>
   <script>
-    let Data = "https://randomuser.me/api/";
+    let requestUrl = "https://randomuser.me/api/";
     let Api = new XMLHttpRequest();
 
-    Api.open("GET", Data);
+    Api.open("GET", requestUrl);
 
     Api.onreadystatechange = function(){
-      console.log(Api.readyState);
+
+      // console.log(Api.readyState);
+
       if (Api.readyState === 4) {
-        console.log(this.responseText);
+        let data = JSON.parse(this.responseText);
+        console.log(data);
+        let {results : [{email}]} = data
+        console.log(email);
+        
       }
     }
       
