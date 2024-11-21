@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchornas</title>
+</head>
+<body>
+    <h1>hello , is this the best morning </h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    let start = document.querySelector('#start')
+    let stop = document.querySelector('#stop')
+    
+    function sayName(str){
+        console.log(str,Date.now());
+    }
+
+    let name;
+
+    start.addEventListener('click',()=>{
+        name = setInterval(sayName,1000,'hello');
+        console.log('start');
+    })
+    stop.addEventListener('click',()=>{
+        clearInterval(name)
+        console.log('stop');
+        name = null
+    })
+
+</script>
+</html>

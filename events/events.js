@@ -16,6 +16,10 @@ let pTag = document.querySelector('#para')
 //     pTag.textContent = 'key down ' + e.key
 // })
 
-document.addEventListener('keypress' , (e) => {
-    pTag.textContent = 'key down ' + e.key
-})
+// document.addEventListener('keypress' , (e) => {
+//     pTag.textContent = 'key down ' + e.key
+// })
+
+document.addEventListener('click', (event) => {
+    console.log(`X: ${event.screenX}, Y: ${event.screenY}`); // coordinates relative to the viewport
+  });

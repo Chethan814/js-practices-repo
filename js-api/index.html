@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api request</title>
+  </head>
+  <body></body>
+  <script>
+    let Data = "https://randomuser.me/api/";
+    let Api = new XMLHttpRequest();
+
+    Api.open("GET", Data);
+
+    Api.onreadystatechange = function(){
+      console.log(Api.readyState);
+      if (Api.readyState === 4) {
+        console.log(this.responseText);
+      }
+    }
+      
+    Api.send();
+
+    console.log(Api);
+  </script>
+</html>
